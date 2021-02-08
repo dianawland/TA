@@ -39,14 +39,30 @@ def index():
 
 @app.route("/tweet", methods=['GET','POST'])
 def tweet():
-    df = pd.read_csv("preprocessing_skripsi.csv")
-    results = []
-    for i in df.index:
-        data = {}
-        data['tweet'] = df['tweet'][i]
-        data ['tweet_preprocessing'] = df['tweet_preprocessing'][i]
-        data ['sentimen'] = df ['sentimen'][i]
-        results.append(data)
+    if request.method == "POST":
+        dataUrl = request.files['csvfile']
+        filename = "data.csv"
+        fileLocation = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        dataUrl.save(fileLocation)
+        df = pd.read_csv(f"{fileLocation}")
+        results = []
+        for i in df.index:
+            data = {}
+            data['tweet'] = df['tweet'][i]
+            data ['tweet_preprocessing'] = df['tweet_preprocessing'][i]
+            data ['sentimen'] = df ['sentimen'][i]
+            results.append(data)
+        # return render_template("tweet.html")
+        # output = []
+        # for item in results:
+        #     output.append({
+        #         "tweet":item["tweet"],
+        #         "tweet_preprocessing":item["tweet_preprocessing"],
+        #         "sentimen":item["sentimen"]
+        #     })
+
+        # print(output)
+        return render_template("tweet.html", data=results)
     return render_template("tweet.html")
       
 @app.route('/data', methods=['GET','POST'])
