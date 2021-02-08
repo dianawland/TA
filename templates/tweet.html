@@ -99,7 +99,7 @@
                 <div class="panel panel-default">
                     <div class="p-2 bg-info">
                 <h3>Upload Data</h3>
-                <form class="" action="data" method="post">
+                <form action="/tweet" method="POST" enctype=multipart/form-data>
                     <input type="file" class="form-control" name="csvfile" value="">
                     <br>
                     <input type="submit" class="btn btn-primary"Submit name="" value="Submit">
@@ -114,9 +114,38 @@
             </center>
             </div>
         </div>
+        <br>
+        <div class="container">
+            <div class="col-md-6"></div>
+                <div class="card card-body">
+                <center>
+                    <div class="panel panel-default">
+                        <div class="p-2">
+                    <h3>Result</h3>
+                    <div>
+                        <table class="table">
+                            <tr>
+                                <th scope="col">Tweet</th>
+                                <th scope="col">Tweet Preprocessing</th>
+                                <th scope="col">Sentiment</th>
+                            </tr>
+                            {% for item in data %}
+                            <tr scope="row">
+                                <td>{{ item["tweet"] }}</td>
+                                <td>{{ item["tweet_preprocessing"] }}</td>
+                                <td>{{ item["sentimen"] }}</td>
+                            </tr>
+                            {% endfor %}
+                            
+                        </table>
+                    </div>
 
-        
+                </center>
+                </div>
+            </div>
 
+
+        <br />
         
     </div>
 </div>
