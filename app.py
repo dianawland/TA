@@ -47,12 +47,11 @@ def tweet():
         data ['tweet_preprocessing'] = df['tweet_preprocessing'][i]
         data ['sentimen'] = df ['sentimen'][i]
         results.append(data)
-    return results
+    return render_template("tweet.html")
       
 @app.route('/data', methods=['GET','POST'])
-def data():
-            
-            return render_template("data.html",results=results)
+def data():        
+    return render_template("data.html",results=results)
 
 @app.route("/preprocessing")
 def preprocessing():
@@ -69,5 +68,4 @@ def nbr():
 
 
 if __name__ == "__main__":
-
     app.run(debug = True)
