@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Analisis Sentimen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- Font Awesome icons (free version)-->
+     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+     <!-- Google fonts-->
+     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+     <!-- Core theme CSS (includes Bootstrap)-->
+
+     <!-- Datatable -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+    <script type = "text/javascript"  src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script type = "text/javascript"  src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script type = "text/javascript"  src="https://cdn.datatables.net/plug-ins/1.10.15/dataRender/datetime.js"></script>
+
+    <!-- Tagator -->
+    <link rel="stylesheet" href="{{url_for('static', filename='tagator/fm.tagator.jquery.css')}}">
+    <script src="{{url_for('static', filename='tagator/fm.tagator.jquery.js')}}"></script>
+     <link rel="stylesheet" href="/static/css/styles.css">
+  </head>
+
+
+
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="/">SENTIMENT ANALYSIS</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button"
+                data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/">Home</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/tweet">Tweet</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                       href="/preprocessing">Preprocessing</a>
+                </li>
+				              <li class="nav-item mx-0 mx-lg-1">
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/classification">Classification</a>
+              </li>
+              <li class="nav-item mx-0 mx-lg-1">
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/nbr">NBR</a>
+              </li>
+				
+				
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<br>
+
+<div class="container ">
+    <div class="row">
+
+     
+
+   
+    </div>
+
+    <br>
+    <div class="jumbotron">
+    <div class="container">
+        <div class="col-md-6"></div>
+            <div class="card card-body">
+            <center>
+                <div class="panel panel-default">
+                <h3>Masukkan CSV Data</h3>
+                <img src="{{url_for('static',filename='img/csv.png')}}" class="middle" height="100px">
+            </center>
+            </div>
+        </div>
+        <br>
+        
+        <div class="container">
+        <div class="col-md-6"></div>
+            <div class="card card-body">
+            <center>
+                <div class="panel panel-default">
+                    <div class="p-2 bg-info">
+                <h3>Upload Data</h3>
+                <form class="" action="data" method="post">
+                    <input type="file" class="form-control" name="csvfile" value="">
+                    <br>
+                    <input type="submit" class="btn btn-primary"Submit name="" value="Submit">
+                    </form></br>
+                    <table class ="display table responsive" style="width :100%">
+                    <thead>
+
+                        
+                    </thead>
+                    </table>
+                </form>
+            </center>
+            </div>
+        </div>
+
+        
+
+        
+    </div>
+</div>
+
+
+<!-- Footer-->
+<footer class="footer bg-black small text-center text-white-50"><div class="container">Copyright © Diana Wulandari 2021</div></footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Third party plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+
+
+
+
+</body>
+
+</html>

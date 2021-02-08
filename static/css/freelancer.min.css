@@ -1,0 +1,46 @@
+body{
+font-family:Lato
+67e4cf7474acb6182bf0b42ad85df36d--sentiment-menu.jpg
+}
+h1,h2,h3,h4,h5,h6
+{
+font-weight:700;
+font-family:Montserrat;
+}
+hr.star-dark,hr.star-light
+{
+max-width:15rem;
+padding:0;
+text-align:center;
+border:none;
+border-top:solid .25rem;
+margin-top:2.5rem;
+margin-bottom:2.5rem
+}
+hr.star-dark:after,hr.star-light:after
+{
+position:relative;
+top:-.8em;
+display:inline-block;
+padding:0 .25em;
+content:'\f005';
+font-family:FontAwesome;font-size:2em
+}
+hr.star-light
+{
+border-color:#fff;
+}
+hr.star-light:after
+{
+color:#fff;
+background-color:#e9ecec;
+}
+hr.star-dark
+{
+border-color:#2c3e50;
+}
+hr.star-dark:after
+.i
+{
+    float:right;
+}

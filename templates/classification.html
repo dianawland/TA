@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+    <html lang="en">
+    
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Analisis Sentimen</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <!-- Font Awesome icons (free version)-->
+         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+         <!-- Google fonts-->
+         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+         <!-- Core theme CSS (includes Bootstrap)-->
+         <link rel="stylesheet" href="/static/css/styles.css">
+      </head>
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">SENTIMENT ANALYSIS</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button"
+                data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/">Home</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/tweet">Tweet</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                       href="/preprocessing">Preprocessing</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/classification">Classification</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/nbr">NBR</a>
+              </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<br/><br/><br/><br/><br/>
+
+<div class="jumbotron">
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="card card-body">
+            <center>
+                <h4>Classification for Naive Bayes</h4>
+                <br/>
+                <form action="http://localhost:5000/nbClassifier">
+                    <input type="submit" value="Classify" name="nbClassifier"/>
+                </form>
+      
+            </center>
+            </div>
+        </div>
+		
+		   <div class="col-md-6">
+            <div class="card card-body">
+            <center>
+                <h4>Classification for Support Vector Machine</h4>
+                <form action="http://localhost:5000/svmClassifier">
+                    <input type="submit" value="Classify" name="svmClassifier"/>
+                </form>
+               
+            </center>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="copyright py-4 text-center text-white fixed-bottom">
+    <div class="container">
+      
+    </div>
+</div>
+</div></div>
+
+<!-- Footer-->
+
+<footer class="footer bg-black small text-center text-white-50"><div class="container">Copyright © Diana Wulandari 2021</div></footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Third party plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+</body>
+
+</html>
