@@ -2,4 +2,5 @@
 
 
 -untuk run program-
-run python 3 app.py
+
+python 3 app.py
