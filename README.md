@@ -2,6 +2,6 @@
 
 this program is for final project on campus and using jupyter notebook and deploy web with flask
 
--untuk run program-
+-to run programs on web- 
 
 python 3 app.py 
